@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Endpoint Reference</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	body  {
+    background-image: url("gbgr.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
+</style>
+</head>
+<body>
+
+ <h1>Endpoint Reference</h1>      
+
+<div class="container">
+  <div class="row">
+ 
+    <div class="col-sm-4">
+    	<h2>Resource URL</h2>
+			localhost:8081/autok
+		<h2>Resource Information</h2>
+		
+			<table class="table table-hover">
+    			<tr>
+        			<td>Method</td>
+        			<td>GET</td>
+     			</tr>
+    			<tr>
+        			<td>Response formats</td>
+        			<td>JSON</td>
+      			</tr>
+      			<tr>
+        			<td>Requires authentication?</td>
+        			<td>No</td>
+     			</tr>
+     		</table>
+
+     	<h2>Parameters</h2>
+     		None
+     	<h2>Example Request</h2>
+     		GET localhost:8081/autok
+     	<h2>Example Response</h2>
+     	<b>[{<p>
+				"gyarto": "VW",<p>
+				"tipus": "Golf",<p>
+				"rendszam": "DFE-567"<p>
+			}, {<p>
+				"gyarto": "Peugeot",<p>
+				"tipus": "206",<p>
+				"rendszam": "KUL-660"<p>
+			}]<p></b>
+    </div>
+    
+    <div class="col-sm-4">
+    	<h2>Resource URL</h2>
+			localhost:8081/addAuto
+		<h2>Resource Information</h2>
+		
+			<table class="table table-hover">
+    			<tr>
+        			<td>Method</td>
+        			<td>POST</td>
+     			</tr>
+    			<tr>
+        			<td>Request formats</td>
+        			<td>JSON</td>
+      			</tr>
+      			<tr>
+        			<td>Requires authentication?</td>
+        			<td>No</td>
+     			</tr>
+     		</table>
+
+     	<h2>Parameters</h2>
+     		None
+     	<h2>Example Request</h2>
+     	<p>
+     		POST localhost:8081/addAuto
+     		<b><p>[{ <p>"gyarto": "Peugeot",<p>
+				"tipus": "206",<p>
+				"rendszam": "KUL-660"<p>
+			}]<p></b>
+    </div>
+
+    <div class="col-sm-4">
+    	<h2>Resource URL</h2>
+			localhost:8081/deleteAuto
+		<h2>Resource Information</h2>
+		
+			<table class="table table-hover">
+			<tr>
+        			<td>Method</td>
+        			<td>GET</td>
+     			</tr>
+    			<tr>
+        			<td>Requires authentication?</td>
+        			<td>No</td>
+     			</tr>
+     			
+     		</table>
+
+     	<h2>Parameters</h2>
+     		<table class="table table-hover">
+    					<tr>
+     		   				<th>Name</th>
+        					<th>Description</th>
+        					<th>Example</th>
+                  		</tr>
+                  <tr>
+        			<td>rendszam</td>
+        			<td>törölni kívánt auto rendszáma</td>
+        			<td>rendszam=DRE-567</td>
+     			</tr>
+     		</table>
+     	<h2>Example Request</h2>
+     		GET localhost:8081/deleteAuto/?rendszam=KUL-660
+     		<p>
+     		<p>
+     		<a href="index.html" class="btn btn-info" role="button">Vissza</a>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
